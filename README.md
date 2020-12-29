@@ -1,2 +1,1 @@
-# make_post
-::
+Program to help making a post.
