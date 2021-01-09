@@ -15,16 +15,16 @@
    "metadata": {},
    "outputs": [],
    "source": [
-    "directory_path = \"./Kobe and Jordan/\"\n",
-    "# directory_path = \"./Only Title/\"\n",
+    "# directory_path = \"./Kobe and Jordan/\"\n",
+    "directory_path = \"./Only Title/\"\n",
     "# directory_path = \"/Users/kwat/code/kwatme.com/posts/Approach to the Patient with Neurologic Disease/\"\n",
     "\n",
-    "tag_ = [\"Michael Jordan\", \"Kobe Bryant\", \"Compete\"]\n",
-    "# tag_ = []\n",
+    "# tag_ = [\"Michael Jordan\", \"Kobe Bryant\", \"Compete\"]\n",
+    "tag_ = []\n",
     "# tag_ = [\"Medicine\", \"Neurology\"]\n",
     "\n",
-    "key_path = \"./cover_template.key\"\n",
-    "# key_path = nothing\n",
+    "# key_path = \"./coverart.key\"\n",
+    "key_path = nothing\n",
     "\n",
     "overwrite = true\n",
     "\n",
@@ -37,7 +37,7 @@
    "metadata": {},
    "outputs": [],
    "source": [
-    "cover_prefix = \"cover\""
+    "image_name_prefix = \"coverart\""
    ]
   },
   {
@@ -48,7 +48,7 @@
    "source": [
     "if key_path !== nothing\n",
     "    \n",
-    "    cp(key_path, joinpath(directory_path, \"$(cover_prefix).key\"); force = overwrite)\n",
+    "    cp(key_path, joinpath(directory_path, \"$(image_name_prefix).key\"); force = overwrite)\n",
     "    \n",
     "end\n",
     "\n",
@@ -65,7 +65,7 @@
     "\n",
     "frontmatter_now = now()\n",
     "\n",
-    "frontmatter_cover = \"$cover_prefix.jpeg\"\n",
+    "frontmatter_image = \"$image_name_prefix.jpeg\"\n",
     "\n",
     "frontmatter_topics = replace(string(tag_), \"Any[]\" => \"[]\")\n",
     "\n",
@@ -107,7 +107,7 @@
     "---\n",
     "title: $frontmatter_title\n",
     "time: $frontmatter_now\n",
-    "cover: $frontmatter_cover\n",
+    "image: $frontmatter_image\n",
     "topics: $frontmatter_topics\n",
     "---\n",
     "\"\"\"\n",
