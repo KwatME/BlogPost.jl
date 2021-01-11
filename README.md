@@ -1,5 +1,7 @@
 `mdpost` is a command line program for making markdown-based post.
 
+It complements [Gatsby.js](https://www.gatsbyjs.com) markdown workflow.
+
 ## Install
 
 ```sh
