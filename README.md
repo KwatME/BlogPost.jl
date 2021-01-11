@@ -48,4 +48,4 @@ mdpost make test/Kobe\ and\ Jordan/
 mdpost update test/Kobe\ and\ Jordan/index.md
 ```
 
-#### Check out [kwatme.com](kwatme.com), which is built with [Gatsby.js](https://www.gatsbyjs.com) and [MDPost.py](https://github.com/KwatME/MDPost.py).
+#### Check out [kwatme.com](https://kwatme.com), which is built with [Gatsby.js](https://www.gatsbyjs.com) and [MDPost.py](https://github.com/KwatME/MDPost.py).
