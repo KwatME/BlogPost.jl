@@ -49,3 +49,9 @@ mdpost update test/Kobe\ and\ Jordan/index.md
 ```
 
 #### Check out [kwatme.com](https://kwatme.com), which is built with [Gatsby.js](https://www.gatsbyjs.com) and [MDPost.py](https://github.com/KwatME/MDPost.py).
+
+## To do
+
+Rename tags to topics
+
+Don't overwrite
