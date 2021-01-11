@@ -1,7 +1,36 @@
-Program to help making a post.
+`mdpost` is a command line program for making markdown-based post.
 
-## To do
+## Install
 
-Support more than .png in image/
+```sh
+pip install git+https://github.com/KwatME/MDPost.py
+```
 
-Make command line program
+## Use
+
+Make a post and starting writing in Title/index.md.
+
+```sh
+mdpost make Title
+```
+
+```sh
+mdpost make "Anoher Title" --tag Tag --tag "Another Tag"
+```
+
+```sh
+mdpost make "Yet Anoher Title" --tag Tag --tag "Another Tag" --cover path/to/cover.jpeg
+```
+
+Convert an existing directory into a post directory.
+If directory/image/ has images ([number].png), links to these images will be listed in directory/index.md.
+
+```sh
+mdpost make /path/to/directory
+```
+
+Update frontmatter's time to be now.
+
+```sh
+mdpost update path/to/index.md
+```
