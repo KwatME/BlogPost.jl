@@ -38,4 +38,14 @@ Update frontmatter's time to be now.
 mdpost update path/to/index.md
 ```
 
-#### Check out [kwatme.com](kwatme.com), which is built and maintained with Gatsby.js and MDPost.py.
+## Test
+
+```sh
+mdpost make test/Kobe\ and\ Jordan/
+```
+
+```sh
+mdpost update test/Kobe\ and\ Jordan/index.md
+```
+
+#### Check out [kwatme.com](kwatme.com), which is built with [Gatsby.js](https://www.gatsbyjs.com) and [MDPost.py](https://github.com/KwatME/MDPost.py).
