@@ -17,11 +17,11 @@ mdpost make Title
 ```
 
 ```sh
-mdpost make "Anoher Title" --tag Tag --tag "Another Tag"
+mdpost make "Title with Space" --tag Tag --tag "Tag with Space"
 ```
 
 ```sh
-mdpost make "Yet Anoher Title" --tag Tag --tag "Another Tag" --cover path/to/cover.jpeg
+mdpost make "Title with Space" --tag "Tag with Space" --cover path/to/cover.jpeg
 ```
 
 Convert an existing directory into a post directory.
@@ -37,3 +37,5 @@ Update frontmatter's time to be now.
 ```sh
 mdpost update path/to/index.md
 ```
+
+#### Check out [kwatme.com](kwatme.com), which is built and maintained with Gatsby.js and MDPost.py.
