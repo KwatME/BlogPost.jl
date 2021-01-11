@@ -25,7 +25,8 @@ mdpost make "Yet Anoher Title" --tag Tag --tag "Another Tag" --cover path/to/cov
 ```
 
 Convert an existing directory into a post directory.
-If directory/image/ has images ([number].png), links to these images will be listed in directory/index.md.
+If directory/image/ has images (named [0-9+].png), this will sort and add them to the directory/index.md.
+This is powerful because you can simply take bunch of screenshots and automatically make a post with them.
 
 ```sh
 mdpost make /path/to/directory
