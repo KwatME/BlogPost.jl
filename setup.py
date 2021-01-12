@@ -4,7 +4,7 @@ name = "MDPost"
 
 setup(
     name=name,
-    version="0.1.0",
+    version="0.2.0",
     python_requires=">=3.6",
     install_requires=("click", "pyyaml"),
     packages=(name,),
