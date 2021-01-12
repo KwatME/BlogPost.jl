@@ -10,30 +10,40 @@ pip install git+https://github.com/KwatME/MDPost.py
 
 ## Use
 
-Make a post and starting writing in Title/index.md:
+### Make a post
+
+Make a post and start adding content to Title/index.md:
 
 ```sh
 mdpost Title
 ```
 
+Add some tags to the frontmatter:
+
 ```sh
 mdpost "Title with Space" --tag Tag --tag "Tag with Space"
 ```
 
-Convert a directory with image/ into a post:
+Copy some files to the post directory:
+
+```sh
+mdpost "Title with Space" --copy path/to/file --copy test/cover_template.key
+```
+
+### Convert a directory into a post
 
 ```sh
 mdpost /path/to/directory
 ```
 
-If directory/image/ has images, they will be sorted and listed in directory/index.md.
+If directory/image/ exists, the images will be sorted and listed in directory/index.md.
 This is powerful because you can simply take bunch of screenshots and automatically make a post with them.
 
 ```sh
 mdpost test/Kobe\ and\ Jordan/
 ```
 
-Update frontmatter:
+### Update frontmatter
 
 ```sh
 mdpost path/to/index.md
