@@ -3,8 +3,10 @@ from os import listdir, mkdir
 from os.path import basename, isdir, isfile, join
 from shutil import copy2
 
-from click import Path, argument, command, option, secho
+from click import Path, argument, command, option
 from yaml import dump
+
+from .log import log
 
 
 @command()
@@ -18,16 +20,20 @@ def cli(title_or_directory_path_or_md, copy, tag):
     https://github.com/KwatME/MDPost.py
     """
 
+    tag_ = list(tag)
+
     if isdir(title_or_directory_path_or_md):
 
         directory_path = title_or_directory_path_or_md.rstrip("/")
 
         log("Converting {} into a post...".format(directory_path))
 
-        convert(directory_path, copy, tags=list(tag))
+        convert(directory_path, copy, tags=tag_)
 
-    elif title_or_directory_path_or_md[-3] == ".md" and isfile(
-        title_or_directory_path_or_md
+    elif (
+        3 < len(title_or_directory_path_or_md)
+        and title_or_directory_path_or_md[-3] == ".md"
+        and isfile(title_or_directory_path_or_md)
     ):
 
         md_path = title_or_directory_path_or_md
@@ -42,7 +48,7 @@ def cli(title_or_directory_path_or_md, copy, tag):
 
         log('Making a post "{}/"...'.format(title))
 
-        make(title, copy, tags=tag)
+        make(title, copy, tags=tag_)
 
 
 def convert(directory_path, copy_, **frontmatter):
@@ -82,7 +88,7 @@ def make(title, copy_, **frontmatter):
 
     mkdir(directory_path)
 
-    write_md(make_frontmatter(**frontmatter), md, md_path)
+    write_md(make_frontmatter(title=title, **frontmatter), md, md_path)
 
 
 def copy_file_(copy_, directory_path):
@@ -128,11 +134,4 @@ def error_exist(path):
 
     if isfile(path):
 
-        secho(
-            "{} exists.".format(path), err=True, bold=True, fg="bright_red", bg="black"
-        )
-
-
-def log(message):
-
-    secho(message, bold=True, fg="bright_green", bg="black")
+        log("{} exists.".format(path), kind="error")
