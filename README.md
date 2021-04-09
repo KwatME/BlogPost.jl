@@ -1,4 +1,4 @@
-`mdpost` is a command line program for making markdown-based post.
+`mdpost` is a command line program for quickly making a post.
 
 It complements [Gatsby.js](https://www.gatsbyjs.com) markdown workflow.
 
