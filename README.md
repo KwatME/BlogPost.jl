@@ -37,7 +37,7 @@ mdpost /path/to/directory
 ```
 
 If directory/image/ exists, the images will be sorted and listed in directory/index.md.
-This is powerful because you can simply take bunch of screenshots and automatically make a post with them.
+You can simply take bunch of screenshots and automatically make a post with them.
 
 ```sh
 mdpost test/Kobe\ and\ Jordan/
