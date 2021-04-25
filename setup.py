@@ -1,6 +1,6 @@
 from setuptools import setup
 
-name = "MDPost"
+name = "mdpost"
 
 setup(
     name=name,
