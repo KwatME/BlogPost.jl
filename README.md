@@ -1,11 +1,11 @@
-`mdpost` is a command line program for quickly making a post.
+`mdpost` is a command line program for making a post.
 
 It complements [Gatsby.js](https://www.gatsbyjs.com) markdown workflow.
 
 ## Install
 
 ```sh
-pip install git+https://github.com/KwatME/MDPost.py
+python3 -m pip install git+https://github.com/KwatME/MDPost.py
 ```
 
 ## Use
@@ -53,4 +53,6 @@ mdpost path/to/index.md
 mdpost test/Kobe\ and\ Jordan/index.md
 ```
 
-#### Check out [kwatme.com](https://kwatme.com), which is built with [Gatsby.js](https://www.gatsbyjs.com) and [MDPost.py](https://github.com/KwatME/MDPost.py).
+---
+
+Check out [kwatme.com](https://kwatme.com), which is built with [Gatsby.js](https://www.gatsbyjs.com) and [MDPost.py](https://github.com/KwatME/MDPost.py).
