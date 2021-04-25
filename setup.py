@@ -1,14 +1,12 @@
 from setuptools import setup
 
-name = "mdpost"
+n = "mdpost"
 
 setup(
-    name=name,
+    name=n,
     version="0.2.0",
     python_requires=">=3.6",
     install_requires=("click", "pyyaml"),
-    packages=(name,),
-    entry_points={
-        "console_scripts": ("{0}={1}.{2}:{2}".format(name.lower(), name, "cli"),)
-    },
+    packages=(n,),
+    entry_points={"console_scripts": ("{0}={1}.{2}:{2}".format(n.lower(), n, "cli"),)},
 )
