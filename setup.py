@@ -5,7 +5,8 @@ na = "md_post"
 setup(
     name=na,
     version="0.3.0",
-    python_requires=">=3.6",
+    url="https://github.com/KwatME/md_post",
+    python_requires=">=3.6.0",
     install_requires=["click", "pyyaml"],
     packages=[na],
     entry_points={
